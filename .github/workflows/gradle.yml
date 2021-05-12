@@ -52,7 +52,7 @@ jobs:
           BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
         run: ./gradlew publish docs --no-daemon
       - name: Determine docs target repository
-        uses: haya14busa/action-cond@v1
+        uses: haya14busa/action-cond@v1.0.2
         id: docs_target
         with:
           cond: ${{ github.repository == 'micronaut-projects/micronaut-core' }}
